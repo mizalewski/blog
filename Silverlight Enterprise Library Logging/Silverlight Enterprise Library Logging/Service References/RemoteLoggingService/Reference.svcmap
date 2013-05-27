@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3b6b2d85-f06e-4a87-bd7c-a30eece5b546" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:10901/Logging/RemoteLoggingService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RemoteLoggingService.xsd" MetadataType="Schema" ID="607138c8-2de7-42f5-b042-ac35b3eba15e" SourceId="1" SourceUrl="http://localhost:10901/Logging/RemoteLoggingService.svc?xsd=xsd0" />
+    <MetadataFile FileName="RemoteLoggingService.wsdl" MetadataType="Wsdl" ID="33133320-67e1-4e41-8106-ad1687f16d5f" SourceId="1" SourceUrl="http://localhost:10901/Logging/RemoteLoggingService.svc?wsdl" />
+    <MetadataFile FileName="RemoteLoggingService1.xsd" MetadataType="Schema" ID="3b0c40bc-3364-4bb5-9b70-08fdc511615f" SourceId="1" SourceUrl="http://localhost:10901/Logging/RemoteLoggingService.svc?xsd=xsd2" />
+    <MetadataFile FileName="RemoteLoggingService1.wsdl" MetadataType="Wsdl" ID="0a4952e4-3e6c-4b97-b842-ec523348e06b" SourceId="1" SourceUrl="http://localhost:10901/Logging/RemoteLoggingService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="RemoteLoggingService2.xsd" MetadataType="Schema" ID="6ced1b84-c403-4c91-9d65-26fb3565bb53" SourceId="1" SourceUrl="http://localhost:10901/Logging/RemoteLoggingService.svc?xsd=xsd1" />
+    <MetadataFile FileName="RemoteLoggingService3.xsd" MetadataType="Schema" ID="11788379-c26c-43ee-b75d-fdb2d3b80091" SourceId="1" SourceUrl="http://localhost:10901/Logging/RemoteLoggingService.svc?xsd=xsd4" />
+    <MetadataFile FileName="RemoteLoggingService.disco" MetadataType="Disco" ID="9893518c-b54a-4dc9-8276-2215b4d66fe3" SourceId="1" SourceUrl="http://localhost:10901/Logging/RemoteLoggingService.svc?disco" />
+    <MetadataFile FileName="RemoteLoggingService4.xsd" MetadataType="Schema" ID="835d7095-a926-4a2a-90ee-afbb95a24108" SourceId="1" SourceUrl="http://localhost:10901/Logging/RemoteLoggingService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

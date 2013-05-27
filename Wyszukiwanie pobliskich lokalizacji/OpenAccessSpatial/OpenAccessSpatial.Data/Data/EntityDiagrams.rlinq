@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DomainModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="2.0.0.0" name="EntitiesModel" namespace="OpenAccessSpatial.Core.Data" showPropertiesCompartment="true" xmlns="http://www.telerik.com/ORM">
+  <orm:orm name="EntitiesModel" backend="mssql" xmlns:orm="http://tempuri.org/ORM">
+    <orm:namespace name="OpenAccessSpatial.Core.Data" default="true">
+      <orm:class name="City" behavior="readwrite" uniqueId="a8052f97-f936-4787-874e-fe5b03a35ffa">
+        <orm:table name="Cities" />
+        <orm:identity>
+          <orm:key-generator name="autoinc" />
+          <orm:single-field field-name="id" />
+        </orm:identity>
+        <orm:field name="id" property="Id" behavior="readwrite" uniqueId="30002b5b-93a5-461c-bede-4c0ce7040fb5" type="System.Int32">
+          <orm:column name="CityID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="name" property="Name" behavior="readwrite" uniqueId="9b656f4d-fa54-4299-bbff-77699f1274f7" type="System.String">
+          <orm:column name="Name" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="Varchar" />
+        </orm:field>
+        <orm:field name="postalCode" property="PostalCode" behavior="readwrite" uniqueId="cb6377ce-e956-419d-b59b-f6cfe6223251" type="System.String">
+          <orm:column name="PostalCode" sql-type="char" nullable="false" length="6" scale="0" ado-type="Character" />
+        </orm:field>
+        <orm:field name="coordinates" property="Coordinates" behavior="readwrite" uniqueId="f3ef3478-c40b-4f0c-a3c9-7b1bb36694ea" type="Microsoft.SqlServer.Types.SqlGeography">
+          <orm:column name="Coordinates" sql-type="geography" nullable="false" length="0" scale="0" ado-type="LongVarBinary" />
+        </orm:field>
+      </orm:class>
+    </orm:namespace>
+    <orm:schema schema="">
+      <orm:table name="Cities">
+        <orm:column name="CityID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="Name" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="Varchar" />
+        <orm:column name="PostalCode" sql-type="char" nullable="false" length="6" scale="0" ado-type="Character" />
+        <orm:column name="Coordinates" sql-type="geography" nullable="false" length="0" scale="0" ado-type="LongVarBinary" />
+      </orm:table>
+    </orm:schema>
+  </orm:orm>
+  <ModelSettings xmlns="">
+    <AppConfigConnectionPropertyName>OpenAccessSpatialConnection</AppConfigConnectionPropertyName>
+    <AppConfigConnectionString>data source=(local);initial catalog=GeographyOpenAccess;persist security info=True;user id=issoft;password=issoft</AppConfigConnectionString>
+    <InitialCatalog>GeographyOpenAccess</InitialCatalog>
+    <NamingSettings>
+      <ClassRules>
+        <CaseMode>PascalCase</CaseMode>
+        <PluralizationMode>Singularize</PluralizationMode>
+      </ClassRules>
+      <FieldRules>
+        <CaseMode>CamelCase</CaseMode>
+      </FieldRules>
+      <PropertyRules>
+        <CaseMode>PascalCase</CaseMode>
+      </PropertyRules>
+    </NamingSettings>
+    <CodeGenerationSettings>
+      <MappingDefinitionType>Xml</MappingDefinitionType>
+    </CodeGenerationSettings>
+    <SchemaUpdateSettings>
+      <DeploymentProject>OpenAccessSpatial.Core</DeploymentProject>
+      <DeploymentDirectory>D:\Projekty\Blog\Wyszukiwanie pobliskich lokalizacji\OpenAccessSpatial\OpenAccessSpatial.Data</DeploymentDirectory>
+    </SchemaUpdateSettings>
+    <BackendConfigurationSettings>
+      <BackendConfiguration>
+        <Backend>mssql</Backend>
+        <ProviderName>System.Data.SqlClient</ProviderName>
+      </BackendConfiguration>
+    </BackendConfigurationSettings>
+  </ModelSettings>
+  <Types>
+    <DomainClass Id="a8052f97-f936-4787-874e-fe5b03a35ffa" name="City" namespace="OpenAccessSpatial.Core.Data" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="30002b5b-93a5-461c-bede-4c0ce7040fb5" name="Id" type="Int32" label="Id : Int32" kind="Persistent" identity="true" fieldName="cityID" />
+      <Property Id="9b656f4d-fa54-4299-bbff-77699f1274f7" name="Name" label="Name : String" kind="Persistent" fieldName="name" />
+      <Property Id="cb6377ce-e956-419d-b59b-f6cfe6223251" name="PostalCode" label="PostalCode : String" kind="Persistent" fieldName="postalCode" />
+      <Property Id="f3ef3478-c40b-4f0c-a3c9-7b1bb36694ea" name="Coordinates" type="SqlGeography" label="Coordinates : SqlGeography" kind="Persistent" fieldName="coordinates" />
+    </DomainClass>
+  </Types>
+  <domainContext>
+    <domainModelHasDomainContext Id="30de08ab-4a7f-4730-8046-0521bad0d928">
+      <domainContainer name="EntitiesModel" namespace="OpenAccessSpatial.Core.Data" showPropertiesCompartment="true">
+        <entitySetProperty name="Cities" namespace="OpenAccessSpatial.Core.Data" type="City" label="Cities : IQueryable&lt;OpenAccessSpatial.Core.Data.City&gt;" />
+      </domainContainer>
+    </domainModelHasDomainContext>
+  </domainContext>
+</DomainModel>

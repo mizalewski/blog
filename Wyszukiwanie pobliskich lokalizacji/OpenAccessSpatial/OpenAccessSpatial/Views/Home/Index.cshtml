@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Mapa";
+}
+@section Header {
+<script src="@Url.Content("~/Scripts/GMap.js")" type="text/javascript"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+    var map;
+
+    $(document).ready(function () {
+        map = new GMap();
+        map.initialize(document.getElementById("map_canvas"), 52.229837, 21.011771);
+        $("#search").click(function (event) {
+            $.getJSON("@Url.Content("~/Home/Search")" + "?sourcePostalCode=" + $("#postalCode").val() + "&distance=" + $("#distance").val(), function (data) {
+                map.clearMarkers();
+                $.each(data, function (key, city) {
+                    map.placeMarker(city["Latitude"], city["Longitude"], city["Name"]);
+                });
+            });
+        });
+    });
+</script>
+}
+<h2>Mapa</h2>
+<div style="margin: 10px 0">
+    <label for="postalCode">Kod pocztowy: </label><input type="text" id="postalCode" value="85-001" />
+    <label for="distance">Odległość: </label><input type="text" id="distance" value="100" /> km
+    <button id="search">Szukaj</button>
+</div>
+<div id="map_canvas" style="width: 800px; height: 600px"></div>

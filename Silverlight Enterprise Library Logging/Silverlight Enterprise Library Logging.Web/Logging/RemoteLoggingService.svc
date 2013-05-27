@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Silverlight_Enterprise_Library_Logging.Web.Logging.RemoteLoggingService" CodeBehind="RemoteLoggingService.svc.cs" %>

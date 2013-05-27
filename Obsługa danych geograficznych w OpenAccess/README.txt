@@ -1,0 +1,1 @@
+Do skompilowania aplikacji wymagany jest Telerik OpenAccess ORM w wersji Q2 2011, mo¿e byæ u¿yta wersja Free Edition: http://www.telerik.com/products/orm/free.aspx
